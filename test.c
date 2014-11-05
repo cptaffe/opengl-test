@@ -11,18 +11,17 @@ void setup() {}
 
 void display() {}
 
-int main(int argc, char *argv[])
-{
-       glutInit(&argc, argv);
-       glutInitDisplayMode(GLUT_RGB | GLUT_DEPTH | GLUT_DOUBLE);
-       glutInitWindowSize(512,512);
-       glutCreateWindow("Hello World");
+int main(int argc, char *argv[]) {
+	glutInit(&argc, argv);
+	glutInitDisplayMode(GLUT_RGB | GLUT_DEPTH | GLUT_DOUBLE);
+	glutInitWindowSize(512,512);
+	glutCreateWindow("Hello World");
 
-       setup();
-       glutDisplayFunc(display);
+	setup();
+	glutDisplayFunc(display);
 
-       glutMainLoop();
+	glutMainLoop();
 
-       //getch();//pause here to see results or lack there of
-       return 0;
+	//getch();//pause here to see results or lack there of
+ 	return 0;
 }
