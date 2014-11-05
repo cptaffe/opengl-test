@@ -3,13 +3,23 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+
+#ifdef __APPLE__
 #include "OpenGL/gl.h"
 #include "OpenGL/glu.h"
 #include "GLUT/glut.h"
+#else
+// Linux should go here.
+#endif
 
-void setup() {}
+void setup() {
+	glClearColor(1.0f, 0.0f, 0.0f, 1.0f);
+}
 
-void display() {}
+void display() {
+	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+	glutSwapBuffers();
+}
 
 int main(int argc, char *argv[]) {
 	glutInit(&argc, argv);
